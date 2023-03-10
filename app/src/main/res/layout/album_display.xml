@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/card1">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/secondBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bckgdMain">
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_height="280dp"
+        android:translationZ="2dp"
+        android:theme="@style/Widget.Design.CollapsingToolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+            <RelativeLayout
+                android:id="@+id/bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="182dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/albumDisplay"
+                    android:layout_width="176dp"
+                    android:layout_height="173dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_audio_file"
+                    tools:ignore="MissingConstraints,NotSibling" />
+
+            </LinearLayout>
+
+        <TextView
+        android:id="@+id/albName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Album Name"
+        android:textSize="25sp"
+        android:translationZ="2dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+        <TextView
+        android:id="@+id/artName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Artist Name"
+        android:textSize="20sp"
+        android:translationZ="2dp"
+        android:layout_marginTop="218dp"
+        app:layout_constraintTop_toBottomOf="@+id/albName"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Duration"
+        android:textSize="15sp"
+        android:translationZ="2dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintTop_toBottomOf="@+id/artName"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:translationZ="4dp"
+            tools:ignore="MissingConstraints"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

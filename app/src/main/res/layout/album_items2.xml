@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/items"
+    android:layout_width="402dp"
+    android:layout_height="60dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/bckgdMain"
+    android:layout_marginStart="5dp">
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:padding="2dp"
+            tools:srcCompat="@drawable/ic_album" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@+id/ivImg"
+            android:fontFamily="sans-serif-condensed"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:textColor="@color/textMain"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/ivImg"
+            android:layout_below="@+id/tvName"
+            android:maxEms="7"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/textMain"
+            android:textSize="15sp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_time"
+            android:layout_alignBottom="@+id/tvName"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="-24dp"
+            android:layout_toEndOf="@+id/tvArtist"/>
+
+        <TextView
+            android:id="@+id/tvDur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvName"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="-22.5dp"
+            android:layout_toEndOf="@+id/tvArtist"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_more" />
+
+</RelativeLayout>
